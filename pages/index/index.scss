@@ -1,0 +1,46 @@
+.home{
+		
+		.nav{
+			display       : flex;
+			flex-wrap     : wrap;
+			padding-top: 30rpx;
+			padding-bottom: 10rpx;
+			background    : white;
+			
+			.nav_item{
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			flex-direction : column;
+			width          : 33%;
+			height         : 177rpx;
+
+			image {
+				display: inline-block;
+				width  : 110rpx;
+				height : 110rpx;
+			}
+
+			text {
+				padding-top: 10rpx;
+				font-size  : 24rpx;
+				color      : #333333;
+			}
+		}
+		}
+		
+		.recommend{
+			background: #EEEEEE;
+			overflow: hidden;
+			margin-top: 10px;
+			.tit{
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				letter-spacing: 20px;
+				background: #FFFFFF;
+				margin: 10rpx 0;
+			}
+			
+		}
+	}

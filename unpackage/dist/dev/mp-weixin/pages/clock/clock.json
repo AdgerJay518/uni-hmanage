@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "每日打卡",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-calendar": "/components/ss-calendar/ss-calendar",
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "u-icon": "/uview-ui/components/u-icon/u-icon"
+  }
+}

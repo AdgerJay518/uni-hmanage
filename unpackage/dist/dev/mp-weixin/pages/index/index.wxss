@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.home .nav.data-v-57280228 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-top: 30rpx;
+  padding-bottom: 10rpx;
+  background: white;
+}
+.home .nav .nav_item.data-v-57280228 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  width: 33%;
+  height: 177rpx;
+}
+.home .nav .nav_item image.data-v-57280228 {
+  display: inline-block;
+  width: 110rpx;
+  height: 110rpx;
+}
+.home .nav .nav_item text.data-v-57280228 {
+  padding-top: 10rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.home .recommend.data-v-57280228 {
+  background: #EEEEEE;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.home .recommend .tit.data-v-57280228 {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 20px;
+  background: #FFFFFF;
+  margin: 10rpx 0;
+}
+

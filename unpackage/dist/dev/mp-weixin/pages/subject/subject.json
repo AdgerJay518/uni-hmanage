@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "专题",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "subject": "/components/subject-list"
+  }
+}

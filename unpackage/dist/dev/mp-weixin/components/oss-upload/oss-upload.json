@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "u-upload": "/uview-ui/components/u-upload/u-upload",
+    "u-avatar": "/uview-ui/components/u-avatar/u-avatar"
+  },
+  "component": true
+}

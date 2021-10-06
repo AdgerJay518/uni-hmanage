@@ -1,0 +1,144 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/center/index",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}
+	    ,{
+            "path" : "pages/food/food",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "食品分类",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/sport/sport",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "运动分类",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+            "path" : "pages/clock/clock",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "每日打卡",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/our/our",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "联系我们",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/subject/subject",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "专题",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/auth/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "登录",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		
+        ,{
+            "path" : "pages/center/baseInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改个人信息",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/sf-detail/sf-detail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "详情展示",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/plan/plan",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "计划",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "健康平台",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#909399",
+	    "selectedColor": "d81e06",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [
+			{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/icon/home.png",
+	        "selectedIconPath": "static/icon/home-active.png",
+	        "text": "首页"
+	    }, 
+		{
+		    "pagePath": "pages/sport/sport",
+		    "iconPath": "static/icon/sport.png",
+		    "selectedIconPath": "static/icon/sport-active.png",
+		    "text": "运动"
+		},
+		{
+		    "pagePath": "pages/food/food",
+		    "iconPath": "static/icon/food.png",
+		    "selectedIconPath": "static/icon/food-active.png",
+		    "text": "食品"
+		},
+		{
+		    "pagePath": "pages/plan/plan",
+		    "iconPath": "static/icon/jihua.png",
+		    "selectedIconPath": "static/icon/jihu-active.png",
+		    "text": "计划"
+		},
+		{
+	        "pagePath": "pages/center/index",
+	        "iconPath": "static/icon/member.png",
+	        "selectedIconPath": "static/icon/member-active.png",
+	        "text": "我"
+	    }]
+	}
+}

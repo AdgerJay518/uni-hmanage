@@ -1,0 +1,1 @@
+<view class="content"><subject vue-id="74ed15a6-1" SubjectList="{{SubjectList}}" data-event-opts="{{[['^itemClick',[['goDetail']]]]}}" bind:itemClick="__e" bind:__l="__l"></subject><view class="isOver">-----没有更多了-----</view></view>

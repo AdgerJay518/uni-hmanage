@@ -1,0 +1,18 @@
+.contact{
+	.img{
+		width: 750rpx;
+		height: 320rpx;
+	}
+	.info{
+		padding: 10rpx 20rpx;
+		font-size: 30rpx;
+		view{
+			line-height: 80rpx;
+			border-bottom:1px solid #EEEEEE ;
+		}
+	}
+	.map{
+		width: 750rpx;
+		height: 750rpx;
+	}
+}

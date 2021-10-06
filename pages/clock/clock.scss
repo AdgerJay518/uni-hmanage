@@ -1,0 +1,26 @@
+.home{
+	.popup{
+		width:"500rpx";
+		height:"380rpx";
+	    .content{
+				 padding: 20rpx;
+				 text-align: center;
+				 .title{
+					 margin-top: 60rpx;
+					 line-height: 46rpx;
+					 font-size: 32rpx;
+					 font-weight: bolder
+				 }
+				 .con{
+					 line-height: 46rpx
+				 }
+				 .icon{
+					 margin: 30rpx
+				 }
+			 }
+	}
+	.setbtncolor{
+		background-color: #2B85E4;
+		margin-top:20px;
+	}
+}
