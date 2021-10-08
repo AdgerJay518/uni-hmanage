@@ -76,7 +76,6 @@
 			async getDetail(){
 				const res=await this.$u.api.getDetail(this.id)
 				this.message=res.sport
-				console.log(res.sport)
 			},
 			      onClick (e) {
 					  if(e.index==0){
@@ -100,6 +99,7 @@
 						  sfCategoryId:this.message.sportCategoryId
 					  }
 					  await this.$u.api.addPlan(params)
+					  this.$store.commit('plan/setUpdatePlan', true)
 					  this.$u.toast('添加成功')
 					  this.options[1].info++
 			      }

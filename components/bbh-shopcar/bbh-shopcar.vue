@@ -78,12 +78,17 @@
 				}
 				this.$emit('refreshShopCar',this.list);
 			},
-			signCount(id) { //减少商品
+			async signCount(id) { //减少商品
 				for (var i = 0; i < this.list.length; i++) {
 					var obj = this.list[i].options[0];
 					if (obj.id == id) {
 						if (obj.quantity > 1) {
 							obj.quantity--;
+							const params={
+								id:obj.id,
+								quantity:obj.quantity
+							}
+							await this.$u.api.getQuantity(params)
 							this.$emit('refreshShopCar',this.list);
 						}
 						break;
@@ -91,12 +96,17 @@
 				}
 				this.total();
 			},
-			addCount(id) { //增加商品
+			async addCount(id) { //增加商品
 				for (var i = 0; i < this.list.length; i++) {
 					var obj = this.list[i].options[0];
 					if (obj.id == id) {
 						if (obj.quantity < 5) {
 							obj.quantity++;
+							const params={
+								id:obj.id,
+								quantity:obj.quantity
+							}
+							await this.$u.api.getQuantity(params)
 							this.$emit('refreshShopCar',this.list);
 						} else {
 							uni.showToast({
@@ -139,7 +149,11 @@
 							title: '',
 							content: '确定删除吗',
 							confirmText: '确定',
-							success: function(res) {
+							success: async function(res) {
+								const params={
+									id:obj.id
+								}
+								await _this.$u.api.deletePlan(params)
 								if (res.confirm) {
 									_this.list.splice(i, 1);
 									_this.$emit('refreshShopCar',_this.list);

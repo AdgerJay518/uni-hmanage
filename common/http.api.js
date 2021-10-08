@@ -24,6 +24,11 @@ const install = (Vue, vm) => {
 	vm.$u.api.addPlan = params => vm.$u.post('plan/add',params);
 	//获取用户的计划列表
 	vm.$u.api.getPlanList = () => vm.$u.get('plan/list');
+	//修改计划列表中sf数量
+	vm.$u.api.getQuantity = params => vm.$u.get('plan/update/quantity',params);
+	//添加到计划
+	vm.$u.api.deletePlan = params => vm.$u.post('plan/delete',params);
+	
 }
 
 export default {
