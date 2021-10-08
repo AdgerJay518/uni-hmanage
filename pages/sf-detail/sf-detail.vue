@@ -50,7 +50,10 @@
 		components: {uniGoodsNav},
 		data() {
 			return {
+				sf_id:'',
+				member_id:'',
 				id:0,
+				info:2,
 				message:[],
 				list:[],
 				        options: [{
@@ -59,7 +62,7 @@
 				        }, {
 				            icon: 'list',
 				            text: '计划列表',
-				            info: 0
+				            info: this.info
 				        }],
 				        buttonGroup: [{
 				          text: '加入计划',
@@ -76,18 +79,34 @@
 				console.log(res.sport)
 			},
 			      onClick (e) {
-			        this.$u.route({
-						type:'switchTab',
-						url:'pages/plan/plan'
-					})
+					  if(e.index==0){
+						  
+					  }
+					  if(e.index==1){
+						  this.$u.route({
+						  	type:'switchTab',
+						  	url:'pages/plan/plan'
+						  })
+					  }
 			      },
-			      buttonClick (e) {
-			        console.log(e)
-			        this.options[1].info++
+			      async buttonClick () {
+					  const params={
+						  sfId:this.id,
+						  quantity:1,
+						  calorie:this.message.calorie,
+						  sfPic:this.message.pic,
+						  sfName:this.message.name,
+						  sfSn:this.message.sportSn,
+						  sfCategoryId:this.message.sportCategoryId
+					  }
+					  await this.$u.api.addPlan(params)
+					  this.$u.toast('添加成功')
+					  this.options[1].info++
 			      }
 		},
 		onLoad(option) {
 			this.id=option.id
+			this.member_id=this.vuex_user.id
 			this.getDetail()
 		}
 	}

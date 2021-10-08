@@ -20,6 +20,10 @@ const install = (Vue, vm) => {
 	vm.$u.api.ossToken = () => vm.$u.get('aliyun/oss/policy');
 	//获取运动详情
 	vm.$u.api.getDetail = params => vm.$u.get('sport/detail/'+params);
+	//添加到计划
+	vm.$u.api.addPlan = params => vm.$u.post('plan/add',params);
+	//获取用户的计划列表
+	vm.$u.api.getPlanList = () => vm.$u.get('plan/list');
 }
 
 export default {

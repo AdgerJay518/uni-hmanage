@@ -1,24 +1,24 @@
 <template>
 	<view>
 		<uni-swipe-action>
-			<uni-swipe-action-item  class="swipeItem" v-for="(obj,index) in list" :options="obj.options" :key="obj.options[0].ID"  @click="swipeClick($event,index)">
+			<uni-swipe-action-item  class="swipeItem" v-for="(obj,index) in list" :options="obj.options" :key="obj.options[0].id"  @click="swipeClick($event,index)">
 				<!-- 自定义布局根据自己的设计稿来 -->
 				<view class="contBox">
-					<view class="circleBox" @click.stop="inp(obj.options[0].ID)">
+					<view class="circleBox" @click.stop="inp(obj.options[0].id)">
 						<image src="../../static/bbh-shopcar/icon/circleCachee.png"  class="circle"  v-if="!obj.options[0].check"></image>
 						<image src="../../static/bbh-shopcar/icon/circleCacheef.png" class="circle"  v-if="obj.options[0].check"></image>
 					</view>
 					<view class="goodBox">
-						<view>{{obj.options[0].name}}<text>{{obj.options[0].price}}</text></view>
+						<view>{{obj.options[0].sfName}}-<text>{{obj.options[0].calorie}}</text>（卡/半小时）</view>
 						<view class="countBox">
-							<view class="sign" @click="signCount(obj.options[0].ID)">
-								<image src="/static/bbh-shopcar/icon/signf.png"  v-if="obj.options[0].count>1"></image>
-								<image src="/static/bbh-shopcar/icon/signe.png"  v-if="obj.options[0].count==1"></image>
+							<view class="sign" @click="signCount(obj.options[0].id)">
+								<image src="/static/bbh-shopcar/icon/signf.png"  v-if="obj.options[0].quantity>1"></image>
+								<image src="/static/bbh-shopcar/icon/signe.png"  v-if="obj.options[0].quantity==1"></image>
 							</view>
-							<view class="count">{{obj.options[0].count}}</view>
-							<view class="add" @click="addCount(obj.options[0].ID)">
-								<image src="/static/bbh-shopcar/icon/addf.png"   v-if="obj.options[0].stock>obj.options[0].count"></image>
-								<image src="/static/bbh-shopcar/icon/adde.png"   v-if="obj.options[0].stock==obj.options[0].count"></image>
+							<view class="count">{{obj.options[0].quantity}}</view>
+							<view class="add" @click="addCount(obj.options[0].id)">
+								<image src="/static/bbh-shopcar/icon/addf.png"   v-if="obj.options[0].quantity<5"></image>
+								<image src="/static/bbh-shopcar/icon/adde.png"   v-if="obj.options[0].quantity==5"></image>
 							</view>
 						</view>
 					</view>
@@ -34,9 +34,9 @@
 					<image src="/static/bbh-shopcar/icon/circleCachee.png"   v-if="!flag"></image>
 					<text>全选</text>
 				</view>
-				<text class="total">￥{{money}}</text>
+				<text class="total">{{money}}卡-{{time}}小时</text>
 			</view>
-			<view @click="goPay()">去结算</view>
+			<view @click="goPay()">开始</view>
 		</view>
 	</view>
 </template>
@@ -48,14 +48,17 @@
 		},
 		data(){
 			return { 
+				check : 0,
 				flag  : false,				//判断是否全选
 				money : 0,					//总金额
-				num   : 0 					//删除数据后，用来判断是否全选
+				num   : 0, 					//删除数据后，用来判断是否全选
+				time  : 0,
+				half  : 0.5
 			}
 		},
 		methods:{
 			swipeClick(e, index) {
-				this.removeM(e.content.ID);
+				this.removeM(e.content.id);
 			},
 			all(index) { //全选
 				this.flag = !this.flag;
@@ -71,15 +74,16 @@
 					}
 					this.num = 0;
 					this.money = 0;
+					this.time=0;
 				}
 				this.$emit('refreshShopCar',this.list);
 			},
 			signCount(id) { //减少商品
 				for (var i = 0; i < this.list.length; i++) {
 					var obj = this.list[i].options[0];
-					if (obj.ID == id) {
-						if (obj.count > 1) {
-							obj.count--;
+					if (obj.id == id) {
+						if (obj.quantity > 1) {
+							obj.quantity--;
 							this.$emit('refreshShopCar',this.list);
 						}
 						break;
@@ -90,14 +94,13 @@
 			addCount(id) { //增加商品
 				for (var i = 0; i < this.list.length; i++) {
 					var obj = this.list[i].options[0];
-					if (obj.ID == id) {
-						console.log(obj.ID   +""+  obj.stock)
-						if (obj.count < obj.stock) {
-							obj.count++;
+					if (obj.id == id) {
+						if (obj.quantity < 5) {
+							obj.quantity++;
 							this.$emit('refreshShopCar',this.list);
 						} else {
 							uni.showToast({
-								title: "当前库存不足"
+								title: "请适量锻炼!"
 							});
 						}
 						break;
@@ -108,15 +111,17 @@
 			inp(index) { //商品选择
 				for (var i = 0; i < this.list.length; i++) {
 					var obj = this.list[i].options[0];
-					if (obj.ID == index) {
+					if (obj.id == index) {
 						obj.check = !obj.check;
 						if (obj.check == false) {	  		 //如果有条数据没选择，就取消全选
 							this.flag = false;
 							this.num -= 1;
-							this.money -= obj.price * obj.count;
+							this.money -= obj.calorie * obj.quantity;
+							this.time-= obj.quantity * this.half
 						} else {
 							this.num += 1;
-							this.money += obj.price * obj.count;
+							this.money += obj.calorie * obj.quantity;
+							this.time+= obj.quantity * this.half
 							if (this.num == this.list.length) {		//如果全部选中了
 								this.flag = true;
 							}
@@ -129,10 +134,10 @@
 				var _this = this;
 				for(var i = 0; i < this.list.length; i++) {
 					var obj = this.list[i].options[0];
-					if (obj.ID == id) {
+					if (obj.id == id) {
 						uni.showModal({
 							title: '',
-							content: '确定删除,不再看看吗',
+							content: '确定删除吗',
 							confirmText: '确定',
 							success: function(res) {
 								if (res.confirm) {
@@ -158,9 +163,11 @@
 			},
 			total() { //计算总价---只计算选中的；
 				this.money = 0;
+				this.time=0;
 				for (var i = 0; i < this.list.length; i++) {
 					if (this.list[i].options[0].check == true) {
-						this.money += this.list[i].options[0].price * this.list[i].options[0].count;
+						this.money += this.list[i].options[0].calorie * this.list[i].options[0].quantity;
+						this.time +=this.list[i].options[0].quantity * this.half
 					}
 				}
 			},
