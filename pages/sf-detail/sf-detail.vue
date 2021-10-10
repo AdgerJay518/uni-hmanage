@@ -90,7 +90,7 @@
 			      },
 			      async buttonClick () {
 					  const params={
-						  sfId:this.id,
+						  sfId:this.message.id,
 						  quantity:1,
 						  calorie:this.message.calorie,
 						  sfPic:this.message.pic,

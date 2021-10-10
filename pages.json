@@ -97,6 +97,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/center/planHistory/planHistory",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "历史",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

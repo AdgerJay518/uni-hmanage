@@ -186,10 +186,12 @@
 				}
 			},
 			goPay() { //去结算
-				const arry = this.list.filter(function(item) { //结算过虐选中的数据，arry这个数组就是最后你要提交的数据
+				const arry = this.list.filter(function(item) { //结算过选中的数据，arry这个数组就是最后你要提交的数据
 					return item.options[0].check === true;
 				})
 				console.log("最后结算的数据: " + JSON.stringify(arry));
+				console.log("-------------------------------")
+				console.log(arry)
 				if (arry.length == 0) {
 					uni.showToast({
 						title: "您还没有选中要结算的商品",
