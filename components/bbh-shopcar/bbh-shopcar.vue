@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<uni-swipe-action>
-			<uni-swipe-action-item  class="swipeItem" v-for="(obj,index) in list" :options="obj.options" :key="obj.options[0].id"  @click="swipeClick($event,index)">
+			<uni-swipe-action-item  class="swipeItem" v-for="(obj,index) in list" :options="obj.options" :key="obj.options[0].id" v-if="obj.options[0].deleteStatus==0" @click="swipeClick($event,index)">
 				<!-- 自定义布局根据自己的设计稿来 -->
 				<view class="contBox">
 					<view class="circleBox" @click.stop="inp(obj.options[0].id)">
@@ -189,9 +189,6 @@
 				const arry = this.list.filter(function(item) { //结算过选中的数据，arry这个数组就是最后你要提交的数据
 					return item.options[0].check === true;
 				})
-				console.log("最后结算的数据: " + JSON.stringify(arry));
-				console.log("-------------------------------")
-				console.log(arry)
 				if (arry.length == 0) {
 					uni.showToast({
 						title: "您还没有选中要结算的商品",
@@ -199,6 +196,14 @@
 					});
 					return
 				}
+				this.$u.route({
+					url:'pages/waiting_for_restaurant_order/waiting_for_restaurant_order',
+					params:{
+						list: JSON.stringify(arry),
+						totalCalorie:this.money,
+						totalTime:this.time
+					}
+				})
 			}
 		}
 	}

@@ -105,7 +105,18 @@
                 "enablePullDownRefresh": false
             }
             
-        }
+        },
+		    {
+		        "path": "pages/waiting_for_restaurant_order/waiting_for_restaurant_order",
+		        "style": {
+		            "navigationBarTitleText": "正在进行",
+		            "enablePullDownRefresh": true,
+		            "backgroundTextStyle": "dark",
+		            "app-plus": {
+		                "titleView": false
+		            }
+		        }
+		    }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

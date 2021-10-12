@@ -20,7 +20,7 @@
 		<view class="u-m-t-20">
 			<u-cell-group>
 				<u-cell-item icon="order" title="历史计划" @click="toPlanHistory"></u-cell-item>
-				<u-cell-item icon="star" title="收藏"></u-cell-item>
+				<u-cell-item icon="hourglass" title="正在进行" @click="toWaiting"></u-cell-item>
 				<u-cell-item icon="photo" title="相册"></u-cell-item>
 				<u-cell-item icon="coupon" title="卡券"></u-cell-item>
 				<u-cell-item icon="heart" title="关注"></u-cell-item>
@@ -57,6 +57,11 @@
 			toPlanHistory(){
 				this.$u.route({
 					url:'pages/center/planHistory/planHistory'
+				})
+			},
+			toWaiting(){
+				this.$u.route({
+					url:'pages/waiting_for_restaurant_order/waiting_for_restaurant_order'
 				})
 			},
 			async logOut(){

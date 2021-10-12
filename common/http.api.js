@@ -30,6 +30,8 @@ const install = (Vue, vm) => {
 	vm.$u.api.deletePlan = params => vm.$u.post('plan/delete',params);
 	//按状态分页获取用户订单列表
 	vm.$u.api.getOrderList = params => vm.$u.get('order/list',params);
+	//根据计划信息生成计划单
+	vm.$u.api.generateOrder = params => vm.$u.post('order/generateOrder',params);
 	
 }
 

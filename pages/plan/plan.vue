@@ -1,6 +1,10 @@
 <template>
 	<view>
-		<bbh-shopcar :list="list" class="shopBox"  @refreshShopCar="refreshShopCar"></bbh-shopcar>
+		<bbh-shopcar 
+		:list="list" 
+		class="shopBox"  
+		@refreshShopCar="refreshShopCar"
+		></bbh-shopcar>
 	</view>
 </template>
 <script>
@@ -27,7 +31,6 @@
 		// },
 		async onShow() {
 			if(!this.getUpdatePlan) return false
-			console.log("show")
 			const res=await this.$u.api.getPlanList()
 			this.list=[]
 			for(var i=0;i<res.length;i++){
