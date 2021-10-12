@@ -1,0 +1,43 @@
+//本页面由uniapp切片工具生成，uni-app切片-可视化设计工具(一套代码编译到7个平台iOS、Android、H5、小程序)，软件下载地址：http://www.ymznkf.com/new_view_669.htm
+html,body,#app {height: 100%;width: 100%;}
+.YmContent {height: 100%;width: 100%;}
+uni-page-body,#app {height: 100%;}
+button::after {border: none;width: auto;}
+input{outline: none;border: none;list-style: none;width: auto;}
+.list_item{float: left;}
+.ym_hide{display: none;}
+.ym_show{display: block;}
+.slide-image {  width: 100%;  height:100%;}
+.list_horizontal {width: auto; display:inline-block; }
+ .prescription_label_1{white-space:normal;width:750upx;padding:0upx;clear:both;float:left;background-color:#ffffff; border-radius:0upx;font-size:6upx;}
+ .prescription_label_1 .prescription_label_2{white-space:normal;width:510upx;height:41upx;padding:0upx;clear:both;margin-top:42upx;margin-left:30upx;float:left; border-radius:0upx; color:#646464;font-size:32upx; line-height:41upx;}
+ .prescription_label_1 .No{white-space:normal;width:510upx;height:35upx;padding:0upx;clear:both;margin-top:20upx;margin-left:30upx;float:left; border-radius:0upx; color:#646464;font-size:23upx; line-height:35upx;}
+ .prescription_label_1 .prescription_label_4{white-space:normal;width:692upx;height:200upx;padding:0upx;clear:both;margin-top:27upx;margin-left:29upx;float:left;background-color:#eef9fc; border-radius:0upx;font-size:6upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_12{white-space:normal;width:651upx;height:42upx;padding:0upx;clear:both;margin-top:22upx;margin-left:29upx;float:left; border-radius:0upx;font-size:41upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_12 .prescription_label_15{white-space:normal;width:87upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:30upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_12 .RealName{white-space:normal;width:228upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:30upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_12 .prescription_label_17{white-space:normal;width:77upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:29upx;float:left; border-radius:0upx; color:#646464;font-size:29upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_12 .payType{white-space:normal;width:170upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:28upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_13{white-space:normal;width:651upx;height:42upx;padding:0upx;clear:both;margin-top:13upx;margin-left:29upx;float:left; border-radius:0upx;font-size:44upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_13 .prescription_label_15{white-space:normal;width:87upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:29upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_13 .age{white-space:normal;width:228upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx;font-size:41upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_13 .prescription_label_17{white-space:normal;width:77upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:29upx;float:left; border-radius:0upx; color:#646464;font-size:29upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_13 .sex{white-space:normal;width:170upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:26upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_14{white-space:normal;width:651upx;height:42upx;padding:0upx;clear:both;margin-top:17upx;margin-left:29upx;float:left; border-radius:0upx;font-size:37upx; line-height:38upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_14 .prescription_label_15{white-space:normal;width:137upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:28upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_4 .prescription_label_14 .result{white-space:normal;width:512upx;height:42upx;padding:0upx;margin-top:0upx;margin-left:2upx;float:left; border-radius:0upx;font-size:41upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_5{white-space:normal;width:72upx;height:46upx;padding:0upx;clear:both;margin-top:59upx;margin-left:31upx;float:left; border-radius:0upx; color:#646464;font-size:37upx; line-height:46upx;}
+ .prescription_label_1 .prescription_label_7{white-space:normal;width:692upx;min-height:462upx;padding:0upx;clear:both;margin-top:25upx;margin-left:30upx;float:left; border-bottom-color:#e1e1e1; border-bottom-width:1upx; border-bottom-style:solid; border-top-color:#e1e1e1; border-top-width:1upx; border-top-style:solid; border-radius:0upx;font-size:6upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27{white-space:normal;width:692upx;position: relative;height:133upx;padding:0upx;margin-top:9upx;margin-left:0upx;float:left; border-radius:0upx;font-size:6upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_28{white-space:normal;width:692upx;height:45upx;padding:0upx;margin-top:18upx;margin-left:0upx;float:left;position: absolute;top: 0upx;left: 0upx; border-radius:0upx;font-size:44upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_28 .xh{white-space:normal;width:29upx;height:45upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#646464;font-size:24upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_28 .DrugName{white-space:normal;width:448upx;height:45upx;padding:0upx;margin-top:0upx;margin-left:2upx;float:left; border-radius:0upx; color:#646464;font-size:32upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_28 .amount{white-space:normal;width:67upx;height:45upx;padding:0upx;margin-top:0upx;margin-left:18upx;float:left; border-radius:0upx; color:#646464;font-size:4upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_28 .price{white-space:normal;width:118upx;height:45upx;padding:0upx;margin-top:0upx;margin-left:10upx;float:left; border-radius:0upx; color:#646464;font-size:25upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .used{white-space:normal;width:494upx;height:45upx;padding:0upx;margin-top:82upx;margin-left:23upx;float:left;position: absolute;top: 0upx;left: 0upx; border-radius:0upx; color:#c8c8c8;font-size:30upx; line-height:45upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_30{white-space:normal;width:33upx;height:32upx;padding:0upx;margin-top:90upx;margin-left:535upx;float:left;position: absolute;top: 0upx;left: 0upx; border-radius:0upx;font-size:34upx; line-height:32upx;}
+ .prescription_label_1 .prescription_label_7 .prescription_label_27 .prescription_label_31{white-space:normal;width:119upx;height:45upx;padding:0upx;margin-top:82upx;margin-left:573upx;float:left;position: absolute;top: 0upx;left: 0upx; border-radius:0upx; color:#00c864;font-size:29upx; line-height:42upx;}
+ .prescription_label_1 .prescription_label_8{white-space:normal;width:692upx;height:47upx;padding:0upx;clear:both;margin-top:29upx;margin-left:30upx;float:left; border-radius:0upx;font-size:6upx; line-height:47upx;}
+ .prescription_label_1 .prescription_label_8 .prescription_label_10{white-space:normal;width:563upx;height:47upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left;text-align:right; border-radius:0upx; color:#646464;font-size:32upx; line-height:47upx;}
+ .prescription_label_1 .prescription_label_8 .Total{white-space:normal;width:129upx;height:47upx;padding:0upx;margin-top:0upx;margin-left:0upx;float:left; border-radius:0upx; color:#ff6400;font-size:27upx; line-height:47upx;}
+ .prescription_label_1 .fromInfo{white-space:normal;width:692upx;height:37upx;padding:0upx;clear:both;margin-top:14upx;margin-left:30upx;float:left;text-align:right; border-radius:0upx; color:#646464;font-size:29upx; line-height:37upx;}

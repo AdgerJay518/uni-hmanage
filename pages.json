@@ -116,7 +116,18 @@
 		                "titleView": false
 		            }
 		        }
-		    }
+		    },
+			{
+			    "path": "pages/prescription_label/prescription_label",
+			    "style": {
+			        "navigationBarTitleText": "详情",
+			        "enablePullDownRefresh": true,
+			        "backgroundTextStyle": "dark",
+			        "app-plus": {
+			            "titleView": false
+			        }
+			    }
+			}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
