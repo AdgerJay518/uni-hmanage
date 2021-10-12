@@ -102,9 +102,10 @@ import app from "../../App.vue"
 					totalTime:this.totalTime
 				}
 				await this.$u.api.generateOrder(params)
-				this.$u.route({
-					url:'pages/center/planHistory/planHistory'
-				})
+				await this.$u.api.deletes({planIds:this.ids})
+				uni.switchTab({
+					url: '../center/index'
+				});
 			},
 			
 			

@@ -26,12 +26,14 @@ const install = (Vue, vm) => {
 	vm.$u.api.getPlanList = () => vm.$u.get('plan/list');
 	//修改计划列表中sf数量
 	vm.$u.api.getQuantity = params => vm.$u.get('plan/update/quantity',params);
-	//添加到计划
+	//单条删除
 	vm.$u.api.deletePlan = params => vm.$u.post('plan/delete',params);
 	//按状态分页获取用户订单列表
 	vm.$u.api.getOrderList = params => vm.$u.get('order/list',params);
 	//根据计划信息生成计划单
 	vm.$u.api.generateOrder = params => vm.$u.post('order/generateOrder',params);
+	//批量删除
+	vm.$u.api.deletes = params => vm.$u.post('plan/deletes',params);
 	
 }
 
