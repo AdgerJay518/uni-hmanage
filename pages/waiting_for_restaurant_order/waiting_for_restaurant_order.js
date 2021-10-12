@@ -24,6 +24,10 @@ import app from "../../App.vue"
 		components:{
 
 		},
+		mounted(){
+			var a = document.getElementsByClassName('uni-page-head-hd')[0]
+			a.style.display = 'none';
+		},
 		onLoad(options) {
 			if(this.list=null&&options.list==null) return
 			else if(options.list!=null){
@@ -73,6 +77,9 @@ import app from "../../App.vue"
 			this.Refresh();
 		},
 		methods: {
+			back(){
+				uni.navigateBack()
+			},
 			/**
 			* waiting_for_restaurant_order_3_3处理函数
 			* 数据绑定  data-index="{{index}}" 
@@ -95,6 +102,9 @@ import app from "../../App.vue"
 					totalTime:this.totalTime
 				}
 				await this.$u.api.generateOrder(params)
+				this.$u.route({
+					url:'pages/center/planHistory/planHistory'
+				})
 			},
 			
 			

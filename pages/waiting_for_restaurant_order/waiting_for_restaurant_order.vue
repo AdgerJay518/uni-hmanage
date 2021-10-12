@@ -4,7 +4,8 @@
 			<view class="waiting_for_restaurant_order_2">
 				<image v-on:click="waiting_for_restaurant_order_3_3_click()"  src="/static/waiting_for_restaurant_order/images/waiting_for_restaurant_order_3_3.jpg" mode="scaleToFill" border="0"    class="waiting_for_restaurant_order_3"></image>
 					<text decode="true" class="waiting_for_restaurant_order_4">暂时没有进行中的计划</text>
-				
+				<button v-on:click="back" class="waiting_for_restaurant_order_6">返回
+				</button>
 			</view>
 			</view>
 			<view v-if="this.list!=null"class="waiting_for_restaurant_order_1">

@@ -9,8 +9,9 @@ import app from "../../../App.vue"
 			formateDate(date){
 				const nDate=new Date(date)
 				const year=nDate.getFullYear()
-				const month=nDate.getMonth().toString().padStart(2,0)
-				const day=nDate.getDay().toString().padStart(2,0)
+				const month=nDate.getMonth()+1
+				const months=month.INT+1
+				const day=nDate.getDate().toString().padStart(2,0)
 				return year+'年'+'-'+month+'月'+'-'+day+'日'
 			}
 		},

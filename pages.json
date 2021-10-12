@@ -110,10 +110,15 @@
 		        "path": "pages/waiting_for_restaurant_order/waiting_for_restaurant_order",
 		        "style": {
 		            "navigationBarTitleText": "正在进行",
-		            "enablePullDownRefresh": true,
+		            "enablePullDownRefresh": false,
 		            "backgroundTextStyle": "dark",
 		            "app-plus": {
-		                "titleView": false
+		                "titleView":true,
+						"titleNView":{
+							"autoBackButton":false
+						},
+						"bounce":"none" // 将回弹属性关掉,
+						
 		            }
 		        }
 		    },
