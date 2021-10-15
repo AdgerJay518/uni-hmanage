@@ -11,7 +11,7 @@
 		
 		<view class="recommend">
 			<view class="tit">推荐专题</view>
-			<subject-list :SubjectList="subjectList"></subject-list>
+			<subject-list :SubjectList="subjectList" @itemClick="goDetail"></subject-list>
 		</view>
 	</view>
 </template>
@@ -46,12 +46,19 @@
 			const res=await this.$u.api.homeContent()
 			this.list=res.advertiseList
 			this.subjectList=res.subjectList
-			console.log(res)
 		},
 		methods:{
 			click(url){
 				uni.navigateTo({
 					url
+				})
+			},
+			goDetail(id){
+				this.$u.route({
+					url:'/pages/subject-detail/subject-detail',
+					params:{
+						list: JSON.stringify(this.subjectList[id])
+					}
 				})
 			}
 		}

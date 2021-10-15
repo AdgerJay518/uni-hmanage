@@ -113,5 +113,5 @@
 </script>
 
 <style lang="scss">
-	@import './sf-detail'
+	@import './sf-detail';
 </style>

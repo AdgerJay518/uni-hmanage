@@ -10,6 +10,8 @@ const install = (Vue, vm) => {
 	vm.$u.api.subjectList = params => vm.$u.get('home/subjectList',params);
 	//以树形结构获取所有运动分类
 	vm.$u.api.getCate = (params = {}) => vm.$u.get('sport/categoryTreeList');
+	//以树形结构获取所有食品分类
+	vm.$u.api.getFoodCate = (params = {}) => vm.$u.get('food/categoryTreeList');
 	//获取用户信息
 	vm.$u.api.getInfo = (params = {}) => vm.$u.get('member/info');
 	//更新用户信息
@@ -20,6 +22,8 @@ const install = (Vue, vm) => {
 	vm.$u.api.ossToken = () => vm.$u.get('aliyun/oss/policy');
 	//获取运动详情
 	vm.$u.api.getDetail = params => vm.$u.get('sport/detail/'+params);
+	//获取运动详情
+	vm.$u.api.getFoodDetail = params => vm.$u.get('food/detail/'+params);
 	//添加到计划
 	vm.$u.api.addPlan = params => vm.$u.post('plan/add',params);
 	//获取用户的计划列表

@@ -1,6 +1,6 @@
 <template>
 	<view class="list">
-		<view class="list_item" v-for="item in SubjectList" :key="item.id" @click="navigator">
+		<view class="list_item" v-for="(item,index) in SubjectList" :key="item.id" @click="navigator(index)">
 			<image :src="item.pic"></image>
 			<view>
 				<text class="name">{{item.categoryName}}</text>
@@ -16,8 +16,8 @@
 	export default{
 		props:['SubjectList'],
 		methods:{
-			navigator(){
-				this.$emit('itemClick')
+			navigator(index){
+				this.$emit('itemClick',index)
 			}
 		}
 	}

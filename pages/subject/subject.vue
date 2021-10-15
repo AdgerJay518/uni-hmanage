@@ -21,9 +21,12 @@
 			this.SubjectList=res
 		},
 		methods:{
-			goDetail(){
-				uni.navigateTo({
-					url:'/pages/subject-detail/subject-detail'
+			goDetail(id){
+				this.$u.route({
+					url:'/pages/subject-detail/subject-detail',
+					params:{
+						list: JSON.stringify(this.SubjectList[id])
+					}
 				})
 			}
 		}

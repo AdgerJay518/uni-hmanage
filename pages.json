@@ -133,6 +133,33 @@
 			        }
 			    }
 			}
+        ,{
+            "path" : "pages/subject-detail/subject-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "专题详情",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/subject-detail/reply",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "回复",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/food-detail/food-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

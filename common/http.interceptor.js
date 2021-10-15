@@ -63,6 +63,10 @@ const install = (Vue, vm) => {
 			vm.$u.toast(res.message);
 			return false
 		}
+		else if(code == 401){
+			vm.$u.toast("您还没有登录");
+			return false;
+		}
 		else if(code == 404) {
 			vm.$u.toast(res.message);
 			setTimeout(() => {
