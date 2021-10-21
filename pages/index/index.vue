@@ -12,6 +12,7 @@
 		<view class="recommend">
 			<view class="tit">推荐专题</view>
 			<subject-list :SubjectList="subjectList" @itemClick="goDetail"></subject-list>
+			<view class="isOver" v-if="flag">-----没有更多了-----</view>
 		</view>
 	</view>
 </template>
@@ -23,6 +24,8 @@
 			return{
 				list:[],
 				subjectList:[],
+				flag:true,
+				pageNum:1,
 				navs:[
 					{
 						icon:'../../static/icon/huati.png',

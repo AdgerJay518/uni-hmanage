@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<subject :SubjectList="SubjectList" @itemClick="goDetail"></subject>
-		<view class="isOver">-----没有更多了-----</view>
+		<view class="isOver" v-if="flag">-----没有更多了-----</view>
 	</view>
 	
 </template>
@@ -12,15 +12,28 @@
 		data(){
 			return{
 				cateId:'',
+				pageNum:1,
+				flag:false,
 				SubjectList:[]
 			}
 		},
 		components:{"subject":subject},
 		async onLoad() {
-			const res=await this.$u.api.subjectList({cateId:this.cateId})
-			this.SubjectList=res
+			this.getList()
+		},
+		async onReachBottom() {
+			if(this.SubjectList.length<this.pageNum*4){
+				this.flag=true
+				return
+			}
+			this.pageNum++
+			this.getList()
 		},
 		methods:{
+			async getList(){
+				const res=await this.$u.api.subjectList({cateId:this.cateId,pageNum:this.pageNum})
+				this.SubjectList=[...this.SubjectList,...res]
+			},
 			goDetail(id){
 				this.$u.route({
 					url:'/pages/subject-detail/subject-detail',
