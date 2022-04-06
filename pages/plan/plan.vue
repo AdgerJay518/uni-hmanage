@@ -29,6 +29,9 @@
 		// 		this.list.push({"options":[this.options[i]]})
 		// 	}
 		// },
+		onLoad() {
+			if(!this.$u.utils.isLogin()) return
+		},
 		async onShow() {
 			if(!this.getUpdatePlan) return false
 			const res=await this.$u.api.getPlanList()

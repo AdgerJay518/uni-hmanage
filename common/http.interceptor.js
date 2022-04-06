@@ -65,6 +65,10 @@ const install = (Vue, vm) => {
 		}
 		else if(code == 401){
 			vm.$u.toast("您还没有登录");
+			setTimeout(() => {
+				// 此为uView的方法，详见路由相关文档
+				vm.$u.route('/pages/auth/login')
+			}, 1500)
 			return false;
 		}
 		else if(code == 404) {

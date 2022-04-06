@@ -8,7 +8,15 @@
     "pages/our/our",
     "pages/subject/subject",
     "pages/auth/login",
-    "pages/center/baseInfo"
+    "pages/center/baseInfo",
+    "pages/sf-detail/sf-detail",
+    "pages/plan/plan",
+    "pages/center/planHistory/planHistory",
+    "pages/waiting_for_restaurant_order/waiting_for_restaurant_order",
+    "pages/prescription_label/prescription_label",
+    "pages/subject-detail/subject-detail",
+    "pages/subject-detail/reply",
+    "pages/food-detail/food-detail"
   ],
   "subPackages": [],
   "window": {
@@ -42,6 +50,12 @@
         "text": "食品"
       },
       {
+        "pagePath": "pages/plan/plan",
+        "iconPath": "static/icon/jihua.png",
+        "selectedIconPath": "static/icon/jihu-active.png",
+        "text": "计划"
+      },
+      {
         "pagePath": "pages/center/index",
         "iconPath": "static/icon/member.png",
         "selectedIconPath": "static/icon/member-active.png",
@@ -49,6 +63,7 @@
       }
     ]
   },
+  "permission": {},
   "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

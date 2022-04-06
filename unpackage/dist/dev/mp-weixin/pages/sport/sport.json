@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "运动分类",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "u-search": "/uview-ui/components/u-search/u-search"
+  }
 }

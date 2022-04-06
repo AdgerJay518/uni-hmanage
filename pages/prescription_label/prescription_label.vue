@@ -15,7 +15,10 @@
 						<text decode="true" class="prescription_label_15">状态:</text>
 						<view class="age">
 							<view v-if="list.status==0">待执行</view>
+							<view v-if="list.status==1">正在执行</view>
 							<view v-if="list.status==2">已完成</view>
+							<view v-if="list.status==3">已关闭</view>
+							<view v-if="list.status==4">无效计划</view>
 						</view>
 						<text decode="true" class="prescription_label_17">来源:</text>
 						<text decode="true" class="sex">

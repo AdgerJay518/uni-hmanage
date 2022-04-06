@@ -279,7 +279,7 @@
 		width: 100%;
 		height: 98upx;
 		position: fixed;
-		bottom: 100upx;
+		bottom: 98upx;
 		left: 0upx;
 		display: flex;
 		z-index: 1001;

@@ -4,12 +4,15 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false
+    "urlCheck": false,
+    "es6": false,
+    "postcss": false,
+    "minified": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx08f0109d80253f20",
-  "projectname": "uView-demo",
+  "appid": "wxdc5faa63346245f4",
+  "projectname": "健康管理平台",
   "condition": {
     "search": {
       "current": -1,

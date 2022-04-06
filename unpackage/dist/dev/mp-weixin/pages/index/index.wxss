@@ -3,7 +3,7 @@
  * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
  * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
  */
-.home .nav.data-v-57280228 {
+.home .nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -13,7 +13,7 @@
   padding-bottom: 10rpx;
   background: white;
 }
-.home .nav .nav_item.data-v-57280228 {
+.home .nav .nav_item {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -30,27 +30,34 @@
   width: 33%;
   height: 177rpx;
 }
-.home .nav .nav_item image.data-v-57280228 {
+.home .nav .nav_item image {
   display: inline-block;
   width: 110rpx;
   height: 110rpx;
 }
-.home .nav .nav_item text.data-v-57280228 {
+.home .nav .nav_item text {
   padding-top: 10rpx;
   font-size: 24rpx;
   color: #333333;
 }
-.home .recommend.data-v-57280228 {
+.home .recommend {
   background: #EEEEEE;
   overflow: hidden;
   margin-top: 10px;
 }
-.home .recommend .tit.data-v-57280228 {
+.home .recommend .tit {
   height: 50px;
   line-height: 50px;
   text-align: center;
   letter-spacing: 20px;
   background: #FFFFFF;
   margin: 10rpx 0;
+}
+.home .recommend .isOver {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 28rpx;
 }
 

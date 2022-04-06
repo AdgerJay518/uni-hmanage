@@ -17,9 +17,11 @@ import app from "../../../App.vue"
 		},
 		data() {
 			return {
+				flag:false,
+				pageNum:1,
 				loadingText: '',
 				list_orders: [],
-				page:0,//当前分页页码
+				page:1,//当前分页页码
 				apiUrl:'',//后端接口地址
 				id:'',//传值使用,方便存在本地的locakStorage  
 				del_id:''//方便存在本地的locakStorage  
@@ -29,8 +31,8 @@ import app from "../../../App.vue"
 
 		},
 		async onLoad(options) {
-			const res=await this.$u.api.getOrderList({status:1})
-			this.list_orders=res
+			this.getOrderList();
+			
 			_self = this;
 			
 			//检查是否登录参考代码,需要用的时候，可以把注释取掉
@@ -51,7 +53,6 @@ import app from "../../../App.vue"
 
 		},
 		onShow() {
-			console.log("on show");
 			//if(this.checkLogin()==false){
 			//	return;
 			//}
@@ -63,12 +64,25 @@ import app from "../../../App.vue"
 			//下拉刷新的时候请求一次数据
 			this.Refresh();
 		},
+		async onReachBottom() {
+			if(this.list_orders.length<this.pageNum*10){
+				this.flag=true
+				return
+			}
+			this.pageNum++
+			this.getOrderList()
+		},
 		methods: {
+			async getOrderList(){
+				const res=await this.$u.api.getOrderList({status:1,pageNum:this.pageNum})
+				console.log(res)
+				this.list_orders=[...this.list_orders,...res.list]
+			},
 			toDetail(index){
 				this.$u.route({
 					url:'pages/prescription_label/prescription_label',
 					params:{
-						list: JSON.stringify(this.list_orders.list[index])
+						list: JSON.stringify(this.list_orders[index])
 					}
 				})
 			},

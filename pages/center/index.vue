@@ -7,7 +7,7 @@
 			</view>
 			<view class="u-flex-1">
 				<view class="u-font-18 u-p-b-20">{{vuex_user.nickname}}</view>
-				<view class="u-font-14 u-tips-color">手机号:{{vuex_user.phone}}</view>
+				<view class="u-font-14 u-tips-color">健康状况:{{level}}</view>
 			</view>
 		</view>
 		
@@ -21,9 +21,9 @@
 			<u-cell-group>
 				<u-cell-item icon="order" title="历史计划" @click="toPlanHistory"></u-cell-item>
 				<u-cell-item icon="hourglass" title="正在进行" @click="toWaiting"></u-cell-item>
-				<u-cell-item icon="photo" title="相册"></u-cell-item>
+				<u-cell-item icon="heart" title="健康管理及建议"></u-cell-item>
 				<u-cell-item icon="coupon" title="卡券"></u-cell-item>
-				<u-cell-item icon="heart" title="关注"></u-cell-item>
+				<u-cell-item icon="photo" title="关注"></u-cell-item>
 			</u-cell-group>
 		</view>
 		

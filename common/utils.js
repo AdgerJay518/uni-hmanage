@@ -27,8 +27,12 @@ const install = (Vue , vm)=>{
 	const updateUser= async()=>{
 		//请求用户信息
 		const userInfo=await vm.$u.api.getInfo()
+		const userExtendsInfo=await vm.$u.api.getExtendsInfo({id:userInfo.id})
+		const healthLevel=await vm.$u.api.healthLevel({height:userExtendsInfo.height,weight:userExtendsInfo.weight})
 		//缓存用户信息
 		vm.$u.vuex('vuex_user',userInfo)
+		vm.$u.vuex('vuex_user_extends',userExtendsInfo)
+		vm.$u.vuex('level',healthLevel)
 	}
 	
 	vm.$u.utils={

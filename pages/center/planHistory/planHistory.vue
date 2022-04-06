@@ -3,7 +3,7 @@
 			<view class="all_orders_1">
 				<text decode="true" class="all_orders_2">全部记录</text>
 				<view class="orders">
-					<view v-for="(item_orders, index) in list_orders.list" :key="index" class="item">
+					<view v-for="(item_orders, index) in list_orders" :key="index" class="item">
 						<view class="all_orders_5" @click="toDetail(index)">
 							<view class="all_orders_7">
 								<image v-on:click="all_orders_8_8_click(item_orders)"  src="/static/all_orders/images/all_orders_8_8.jpg" mode="scaleToFill" border="0"    class="all_orders_8"></image>
@@ -21,6 +21,14 @@
 						</view>
 						<image v-on:click="all_orders_6_6_click(item_orders)"  src="/static/all_orders/images/all_orders_6_6.jpg" mode="scaleToFill" border="0"    class="all_orders_6"></image>
 					</view>
+				</view>
+				<view style="width: 100%;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 28rpx;" 
+				v-if="flag">
+				-----没有更多了-----
 				</view>
 			</view>
 		

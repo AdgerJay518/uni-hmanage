@@ -14,8 +14,14 @@ const install = (Vue, vm) => {
 	vm.$u.api.getFoodCate = (params = {}) => vm.$u.get('food/categoryTreeList');
 	//获取用户信息
 	vm.$u.api.getInfo = (params = {}) => vm.$u.get('member/info');
+	//获取更多用户信息
+	vm.$u.api.getExtendsInfo = params => vm.$u.get('member/ExtendsInfo',params);
 	//更新用户信息
 	vm.$u.api.update = params => vm.$u.post('member/update',params);
+	//更新用户拓展信息
+	vm.$u.api.updateExtends = params => vm.$u.post('member/updateExtends',params);
+	//根据身高体重判断bmi
+	vm.$u.api.healthLevel = params => vm.$u.get('member/healthLevel',params);
 	//退出登录
 	vm.$u.api.logout = () => vm.$u.post('member/logout');
 	//获取oss token

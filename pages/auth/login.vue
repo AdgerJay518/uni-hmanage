@@ -18,8 +18,8 @@
 export default {
 	data() {
 		return {
-			username: '',
-			password:''
+			username: '2284233647',
+			password:'123456'
 		}
 	},
 	computed: {
@@ -49,8 +49,14 @@ export default {
 			this.$u.toast('登陆成功')
 			//请求用户信息
 			const userInfo=await this.$u.api.getInfo()
+			const userExtendsInfo=await this.$u.api.getExtendsInfo({id:userInfo.id})
+			//const healthLevel=await this.$u.api.healthLevel(userExtendsInfo)
+			const healthLevel=await this.$u.api.healthLevel({height:userExtendsInfo.height,weight:userExtendsInfo.weight})
+			console.log(healthLevel)
 			//缓存用户信息
 			this.$u.vuex('vuex_user',userInfo)
+			this.$u.vuex('level',healthLevel)
+			this.$u.vuex('vuex_user_extends',userExtendsInfo)
 			//登陆之后，跳转到来源页
 			const backUrl=uni.getStorageSync('backUrl') || 'pages/index/index'
 			setTimeout(()=>{

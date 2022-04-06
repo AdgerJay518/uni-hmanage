@@ -48,6 +48,7 @@
 		async onLoad(){
 			const res=await this.$u.api.homeContent()
 			this.list=res.advertiseList
+			console.log(this.list)
 			this.subjectList=res.subjectList
 		},
 		methods:{

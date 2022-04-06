@@ -5,7 +5,7 @@
 		</view>
 		<view class="show" v-if="message != null">
 			<view>
-				<u-image width="100%" height="500rpx" 
+				<u-image width="100%" height="100%" 
 				:src="message.pic"
 				mode="widthFix"
 				></u-image>
@@ -78,9 +78,6 @@
 				this.message=res.sport
 			},
 			      onClick (e) {
-					  if(e.index==0){
-						  
-					  }
 					  if(e.index==1){
 						  this.$u.route({
 						  	type:'switchTab',
@@ -92,6 +89,7 @@
 					  const params={
 						  sfId:this.message.id,
 						  quantity:1,
+						  sf:1,
 						  calorie:this.message.calorie,
 						  sfPic:this.message.pic,
 						  sfName:this.message.name,
