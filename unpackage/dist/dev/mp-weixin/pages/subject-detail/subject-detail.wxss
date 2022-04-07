@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.TitComment.data-v-bb8d2af4 {
+  padding: 20rpx;
+  padding-bottom: 10rpx;
+  font-size: 40rpx;
+  text-align: center;
+  background: #EEEEEE;
+  font-weight: 600;
+}
+.comment.data-v-bb8d2af4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 30rpx;
+}
+.comment .left image.data-v-bb8d2af4 {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+.comment .right.data-v-bb8d2af4 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+.comment .right .top.data-v-bb8d2af4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 10rpx;
+}
+.comment .right .top .name.data-v-bb8d2af4 {
+  color: #5677fc;
+}
+.comment .right .top .like.data-v-bb8d2af4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #9a9a9a;
+  font-size: 26rpx;
+}
+.comment .right .top .like .num.data-v-bb8d2af4 {
+  margin-right: 4rpx;
+  color: #9a9a9a;
+}
+.comment .right .top .highlight.data-v-bb8d2af4 {
+  color: #5677fc;
+}
+.comment .right .top .highlight .num.data-v-bb8d2af4 {
+  color: #5677fc;
+}
+.comment .right .content.data-v-bb8d2af4 {
+  margin-bottom: 10rpx;
+}
+.comment .right .reply-box.data-v-bb8d2af4 {
+  background-color: #f2f2f2;
+  border-radius: 12rpx;
+}
+.comment .right .reply-box .item.data-v-bb8d2af4 {
+  padding: 20rpx;
+  border-bottom: solid 2rpx #e4e7ed;
+}
+.comment .right .reply-box .item .username.data-v-bb8d2af4 {
+  font-size: 24rpx;
+  color: #999999;
+}
+.comment .right .reply-box .all-reply.data-v-bb8d2af4 {
+  padding: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  color: #5677fc;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.comment .right .reply-box .all-reply .more.data-v-bb8d2af4 {
+  margin-left: 6rpx;
+}
+.comment .right .bottom.data-v-bb8d2af4 {
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 24rpx;
+  color: #9a9a9a;
+}
+.comment .right .bottom .reply.data-v-bb8d2af4 {
+  color: #5677fc;
+  margin-left: 10rpx;
+}
+

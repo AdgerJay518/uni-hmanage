@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/uni-goods-nav/uni-goods-nav"],{"0470":function(n,t,e){"use strict";e.r(t);var o=e("d1b1"),u=e.n(o);for(var i in o)"default"!==i&&function(n){e.d(t,n,(function(){return o[n]}))}(i);t["default"]=u.a},"0f3e":function(n,t,e){"use strict";var o=e("68f5"),u=e.n(o);u.a},"68f5":function(n,t,e){},ba98:function(n,t,e){"use strict";e.r(t);var o=e("ed52"),u=e("0470");for(var i in u)"default"!==i&&function(n){e.d(t,n,(function(){return u[n]}))}(i);e("0f3e");var c,r=e("f0c5"),f=Object(r["a"])(u["default"],o["b"],o["c"],!1,null,"efd5f13a",null,!1,o["a"],c);t["default"]=f.exports},d1b1:function(n,t,e){"use strict";(function(n){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=function(){Promise.all([e.e("common/vendor"),e.e("components/uni-icons/uni-icons")]).then(function(){return resolve(e("ed62"))}.bind(null,e)).catch(e.oe)},u={name:"UniGoodsNav",components:{uniIcons:o},props:{options:{type:Array,default:function(){return[{icon:"cart",text:"购物车"}]}},buttonGroup:{type:Array,default:function(){return[{text:"加入购物车",backgroundColor:"#ffa200",color:"#fff"}]}},fill:{type:Boolean,default:!1}},methods:{onClick:function(n,t){this.$emit("click",{index:n,content:t})},buttonClick:function(t,e){n.report&&n.report(e.text,e.text),this.$emit("buttonClick",{index:t,content:e})}}};t.default=u}).call(this,e("543d")["default"])},ed52:function(n,t,e){"use strict";e.d(t,"b",(function(){return u})),e.d(t,"c",(function(){return i})),e.d(t,"a",(function(){return o}));var o={uniIcons:function(){return Promise.all([e.e("common/vendor"),e.e("components/uni-icons/uni-icons")]).then(e.bind(null,"ed62"))}},u=function(){var n=this,t=n.$createElement;n._self._c},i=[]}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/uni-goods-nav/uni-goods-nav-create-component',
+    {
+        'components/uni-goods-nav/uni-goods-nav-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("ba98"))
+        })
+    },
+    [['components/uni-goods-nav/uni-goods-nav-create-component']]
+]);

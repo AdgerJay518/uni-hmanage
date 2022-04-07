@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "食品分类",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-search": "/uview-ui/components/u-search/u-search"
+  }
+}

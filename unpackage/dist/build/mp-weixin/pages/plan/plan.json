@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "计划",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "bbh-shopcar": "/components/bbh-shopcar/bbh-shopcar"
+  }
+}

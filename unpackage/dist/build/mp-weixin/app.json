@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/center/index",
+    "pages/food/food",
+    "pages/sport/sport",
+    "pages/clock/clock",
+    "pages/our/our",
+    "pages/subject/subject",
+    "pages/auth/login",
+    "pages/center/baseInfo",
+    "pages/sf-detail/sf-detail",
+    "pages/plan/plan",
+    "pages/center/planHistory/planHistory",
+    "pages/waiting_for_restaurant_order/waiting_for_restaurant_order",
+    "pages/prescription_label/prescription_label",
+    "pages/subject-detail/subject-detail",
+    "pages/subject-detail/reply",
+    "pages/food-detail/food-detail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "健康平台",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#909399",
+    "selectedColor": "d81e06",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/sport/sport",
+        "iconPath": "static/icon/sport.png",
+        "selectedIconPath": "static/icon/sport-active.png",
+        "text": "运动"
+      },
+      {
+        "pagePath": "pages/food/food",
+        "iconPath": "static/icon/food.png",
+        "selectedIconPath": "static/icon/food-active.png",
+        "text": "食品"
+      },
+      {
+        "pagePath": "pages/plan/plan",
+        "iconPath": "static/icon/jihua.png",
+        "selectedIconPath": "static/icon/jihu-active.png",
+        "text": "计划"
+      },
+      {
+        "pagePath": "pages/center/index",
+        "iconPath": "static/icon/member.png",
+        "selectedIconPath": "static/icon/member-active.png",
+        "text": "我"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序中用到了定位"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

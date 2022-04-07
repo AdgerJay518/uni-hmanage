@@ -1,0 +1,1 @@
+.home .popup{width:"500rpx";height:"380rpx"}.home .popup .content{padding:20rpx;text-align:center}.home .popup .content .title{margin-top:60rpx;line-height:46rpx;font-size:32rpx;font-weight:bolder}.home .popup .content .con{line-height:46rpx}.home .popup .content .icon{margin:30rpx}.home .setbtncolor{background-color:#2b85e4;margin-top:20px}

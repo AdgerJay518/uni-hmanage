@@ -1,0 +1,1 @@
+<view class="data-v-3bdd76a6"><bbh-shopcar class="shopBox data-v-3bdd76a6" vue-id="3fd1df20-1" list="{{list}}" data-event-opts="{{[['^refreshShopCar',[['refreshShopCar']]]]}}" bind:refreshShopCar="__e" bind:__l="__l"></bbh-shopcar></view>

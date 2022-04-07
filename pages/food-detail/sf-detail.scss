@@ -1,0 +1,44 @@
+.detail{
+	.show{
+		.box1{
+			padding: 10px;
+			.price{
+				font-size: 35rpx;
+				color: #aa0000;
+			}
+			.name{
+				font-size: 32rpx;
+				line-height: 60rpx;
+			}
+		}
+		.line{
+			height: 10rpx;
+			width: 750rpx;
+			background: #EEEEEE;
+		}
+		.box2{
+			padding: 0 10rpx;
+			font-size: 32rpx;
+			line-height: 70rpx;
+		}
+		.box3{
+			.tit{
+				font-size: 32rpx;
+				padding-left: 10px;
+				border-bottom: 1px solid #EEEEEE;
+				line-height: 70rpx;
+			}
+			.content{
+				padding: 10px;
+				font-size: 28rpx;
+				color: #333333;
+				line-height: 50rpx;
+			}
+		}
+		.nav{
+			position: fixed;
+			bottom: 0;
+			width:100%;
+		}
+	}
+}
