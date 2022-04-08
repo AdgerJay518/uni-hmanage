@@ -21,7 +21,7 @@
 			</view>
 			<view class="line"></view>
 			<view class="box2">
-				<view>运动号：{{message.sportSn}}</view>
+				<view>运动编号：{{message.sportSn}}</view>
 			</view>
 			<view class="line"></view>
 			<view class="box3">

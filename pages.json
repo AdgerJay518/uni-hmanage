@@ -159,7 +159,16 @@
                 "enablePullDownRefresh": false
             }
             
-        }
+        },
+		{
+		    "path" : "pages/center/ManagerAndSuggest",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "健康管理及建议",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

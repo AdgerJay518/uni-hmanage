@@ -18,6 +18,9 @@ App.mpType = 'app'
 import uView from 'uview-ui'
 Vue.use(uView);
 
+//import uView2 from 'uni_modules/uview-ui'
+//Vue.use(uView2);
+
 let vuexStore = require("@/store/$u.mixin.js");
 Vue.mixin(vuexStore);
 

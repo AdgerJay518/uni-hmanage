@@ -44,6 +44,8 @@ const install = (Vue, vm) => {
 	vm.$u.api.generateOrder = params => vm.$u.post('order/generateOrder',params);
 	//批量删除
 	vm.$u.api.deletes = params => vm.$u.post('plan/deletes',params);
+	//根据身高体重判断bmi
+	vm.$u.api.manage = params => vm.$u.get('order/manage',params);
 	
 }
 
