@@ -30,6 +30,16 @@
 					<rich-text :nodes="message.description"></rich-text>
 				</view>
 			</view>
+			<view class="nav">
+				<uni-goods-nav 
+				:fill="true"  
+				:options="options" 
+				:buttonGroup="buttonGroup"  
+				@click="onClick" 
+				@buttonClick="buttonClick" 
+				:list="message"
+				/>
+			</view>
 		</view>
 	</view>
 </template>
@@ -47,15 +57,12 @@
 				message:[],
 				list:[],
 				options: [{
-				    icon: 'star',
-				    text: '收藏'
-				}, {
 				    icon: 'list',
-				    text: '计划列表',
+				    text: '饮食列表',
 				    info: this.info
 				}],
 				buttonGroup: [{
-				  text: '加入计划',
+				  text: '加入列表',
 				  backgroundColor: '#ff0000',
 				  color: '#fff'
 				}
@@ -69,28 +76,27 @@
 				this.message=res.food
 			},
             onClick (e) {
-					  if(e.index==1){
+					  if(e.index==0){
 						  this.$u.route({
-						  	type:'switchTab',
-						  	url:'pages/plan/plan'
+						  	type:'navigateTo',
+						  	url:'pages/center/food/foodManage'
 						  })
 					  }
 			      },
 			      async buttonClick () {
 					  const params={
-						  sfId:this.message.id,
+						  foodId:this.message.id,
 						  quantity:1,
-						  sf:2,
 						  calorie:this.message.calorie,
-						  sfPic:this.message.pic,
-						  sfName:this.message.name,
-						  sfSn:this.message.foodSn,
-						  sfCategoryId:this.message.foodCategoryId
+						  foodPic:this.message.pic,
+						  foodName:this.message.name,
+						  foodSn:this.message.foodSn,
+						  foodCategoryId:this.message.foodCategoryId
 					  }
-					  await this.$u.api.addPlan(params)
+					  await this.$u.api.addPlanFood(params)
 					  this.$store.commit('plan/setUpdatePlan', true)
 					  this.$u.toast('添加成功')
-					  this.options[1].info++
+					  this.options[0].info++
 			      }
 		},
 		onLoad(option) {

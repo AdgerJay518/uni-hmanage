@@ -32,12 +32,22 @@ const install = (Vue, vm) => {
 	vm.$u.api.getFoodDetail = params => vm.$u.get('food/detail/'+params);
 	//添加到计划
 	vm.$u.api.addPlan = params => vm.$u.post('plan/add',params);
+	//添加到饮食
+	vm.$u.api.addPlanFood = params => vm.$u.post('planFood/add',params);
 	//获取用户的计划列表
 	vm.$u.api.getPlanList = () => vm.$u.get('plan/list');
+	//获取用户的饮食
+	vm.$u.api.getPlanFoodList = () => vm.$u.get('planFood/list');
 	//修改计划列表中sf数量
 	vm.$u.api.getQuantity = params => vm.$u.get('plan/update/quantity',params);
 	//单条删除
 	vm.$u.api.deletePlan = params => vm.$u.post('plan/delete',params);
+	//修改计划列表中sf数量
+	vm.$u.api.getQuantityFood = params => vm.$u.get('planFood/update/quantity',params);
+	//单条删除
+	vm.$u.api.deletePlanFood = params => vm.$u.post('planFood/delete',params);
+	//批量删除
+	vm.$u.api.deletesFood = params => vm.$u.post('planFood/deletes',params);
 	//按状态分页获取用户订单列表
 	vm.$u.api.getOrderList = params => vm.$u.get('order/list',params);
 	//根据计划信息生成计划单

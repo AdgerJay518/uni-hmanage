@@ -22,8 +22,7 @@
 				<u-cell-item icon="order" title="历史计划" @click="toPlanHistory"></u-cell-item>
 				<u-cell-item icon="hourglass" title="正在进行" @click="toWaiting"></u-cell-item>
 				<u-cell-item icon="heart" title="健康管理及建议" @click="toManage"></u-cell-item>
-				<u-cell-item icon="coupon" title="卡券"></u-cell-item>
-				<u-cell-item icon="photo" title="关注"></u-cell-item>
+				<u-cell-item icon="coupon" title="今日饮食" @click="toFood"></u-cell-item>
 			</u-cell-group>
 		</view>
 		
@@ -67,6 +66,11 @@
 			toManage(){
 				this.$u.route({
 					url:'pages/center/ManagerAndSuggest'
+				})
+			},
+			toFood(){
+				this.$u.route({
+					url:'pages/center/food/foodManage'
 				})
 			},
 			async logOut(){

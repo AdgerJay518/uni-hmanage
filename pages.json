@@ -168,7 +168,25 @@
 		        "enablePullDownRefresh": false
 		    }
 		    
+		},
+		{
+		    "path" : "pages/center/food/foodManage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "今日饮食",
+		        "enablePullDownRefresh": false
+		    }
+		    
 		}
+        ,{
+            "path" : "components/food-manage/food-manage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
