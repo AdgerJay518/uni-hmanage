@@ -1,7 +1,15 @@
 <template>
 	<view class="YmContent">
-			<view class="all_orders_1">
-				<text decode="true" class="all_orders_2">全部记录</text>
+		
+		<view class="u-tabs-box">
+			<u-tabs-swiper activeColor="#f29100" ref="tabs" :list="list" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
+		</view>
+		
+		<swiper class="swiper-box" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
+				<swiper-item class="swiper-item">
+				<scroll-view scroll-y style="height: 100%;width: 100%;">
+					<view class="all_orders_1">
+						<text decode="true" class="all_orders_2">全部记录</text>
 				<view class="orders">
 					<view v-for="(item_orders, index) in list_orders" :key="index" class="item">
 						<view class="all_orders_5" @click="toDetail(index)">
@@ -30,8 +38,11 @@
 				v-if="flag">
 				-----没有更多了-----
 				</view>
-			</view>
-		
+				</view>
+				</scroll-view>
+				</swiper-item>
+			
+		</swiper>
 
 		<view class="loading">{{loadingText}}</view>
 		<view class="ymBbottom"></view>

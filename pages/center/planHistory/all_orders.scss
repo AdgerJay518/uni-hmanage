@@ -1,6 +1,16 @@
 //本页面由uniapp切片工具生成，uni-app切片-可视化设计工具(一套代码编译到7个平台iOS、Android、H5、小程序)，软件下载地址：http://www.ymznkf.com/new_view_669.htm
 html,body,#app {height: 100%;width: 100%;}
-.YmContent {height: 100%;width: 100%;}
+.YmContent {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - var(--window-top));
+	width: 100%;}
+.swiper-box {
+	flex: 1;
+}
+.swiper-item {
+	height: 100%;
+}
 uni-page-body,#app {height: 100%;}
 button::after {border: none;width: auto;}
 input{outline: none;border: none;list-style: none;width: auto;}
@@ -10,9 +20,9 @@ input{outline: none;border: none;list-style: none;width: auto;}
 .slide-image {  width: 100%;  height:100%;}
 .list_horizontal {width: auto; display:inline-block; }
  .all_orders_1{white-space:normal;width:749upx;padding:0upx;clear:both;float:left;background-color:#f1f2f1;text-align:left; border-radius:0upx;font-size:8upx;}
- .all_orders_1 .all_orders_2{white-space:normal;width:169upx;height:40upx;padding:0upx;clear:both;margin-top:29upx;margin-left:24upx;float:left;text-align:left; border-radius:0upx; color:#000000;font-size:32upx; line-height:40upx;}
- .all_orders_1 .orders{white-space:normal;width:749upx;height:100%;padding:0upx;clear:both;margin-top:6upx;margin-left:0upx;float:left;text-align:left; border-radius:0upx;font-size:8upx;}
- .all_orders_1 .orders .item{white-space:normal;width:702upx;height:250upx;padding:0upx;margin-top:21upx;margin-left:24upx;float:left;background-color:#ffffff;text-align:left; border-radius:0upx;font-size:8upx;}
+.all_orders_2{white-space:normal;width:169upx;height:40upx;padding:0upx;clear:both;margin-top:29upx;margin-left:24upx;float:left;text-align:left; border-radius:0upx; color:#000000;font-size:32upx; line-height:40upx;}
+.orders{white-space:normal;width:749upx;height:100%;padding:0upx;clear:both;margin-top:6upx;margin-left:0upx;float:left;text-align:left; border-radius:0upx;font-size:8upx;}
+.orders .item{white-space:normal;width:702upx;height:250upx;padding:0upx;margin-top:21upx;margin-left:24upx;float:left;background-color:#ffffff;text-align:left; border-radius:0upx;font-size:8upx;}
  .all_orders_1 .orders .item .all_orders_5{white-space:normal;width:571upx;height:181upx;padding:0upx;margin-top:47upx;margin-left:17upx;float:left;text-align:left; border-radius:0upx;font-size:8upx;}
  .all_orders_1 .orders .item .all_orders_5 .all_orders_7{white-space:normal;width:563upx;height:26upx;padding:0upx;clear:both;margin-top:13upx;margin-left:7upx;float:left;text-align:left; border-radius:0upx;font-size:24upx; line-height:26upx;}
  .all_orders_1 .orders .item .all_orders_5 .all_orders_7 .all_orders_8{white-space:normal;width:22upx;height:22upx;padding:0upx;margin-top:1upx;margin-left:0upx;float:left;text-align:left; border-radius:0upx;font-size:20upx; line-height:22upx;}

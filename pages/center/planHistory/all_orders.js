@@ -24,7 +24,17 @@ import app from "../../../App.vue"
 				page:1,//当前分页页码
 				apiUrl:'',//后端接口地址
 				id:'',//传值使用,方便存在本地的locakStorage  
-				del_id:''//方便存在本地的locakStorage  
+				del_id:'',//方便存在本地的locakStorage  
+				current: 0,
+				swiperCurrent: 0,
+				list: [
+					{
+						name: '运动'
+					},
+					{
+						name: '饮食'
+					}
+				],
 			}
 		},
 		components:{
@@ -73,10 +83,38 @@ import app from "../../../App.vue"
 			this.getOrderList()
 		},
 		methods: {
+			reachBottom() {
+				// 此tab为空数据
+				/* if(this.current != 2) {
+					this.loadStatus.splice(this.current,1,"loading")
+					setTimeout(() => {
+						this.getOrderList(this.current);
+					}, 1200);
+				} */
+			},
+			change(index) {
+				this.swiperCurrent = index;
+				if(index==0){
+					this.getOrderList(),
+					console.log("11111")
+				}
+				if(index==1){
+					console.log("22222")
+				}
+			},
+			transition({ detail: { dx } }) {
+				this.$refs.tabs.setDx(dx);
+			},
+			animationfinish({ detail: { current } }) {
+				this.$refs.tabs.setFinishCurrent(current);
+				this.swiperCurrent = current;
+				this.current = current;
+			},
+			
 			async getOrderList(){
 				const res=await this.$u.api.getOrderList({status:1,pageNum:this.pageNum})
-				console.log(res)
 				this.list_orders=[...this.list_orders,...res.list]
+				console.log(this.list_orders)
 			},
 			toDetail(index){
 				this.$u.route({

@@ -30,16 +30,6 @@
 					<rich-text :nodes="message.description"></rich-text>
 				</view>
 			</view>
-			<view class="nav">
-				<uni-goods-nav 
-				:fill="true"  
-				:options="options" 
-				:buttonGroup="buttonGroup"  
-				@click="onClick" 
-				@buttonClick="buttonClick" 
-				:list="message"
-				/>
-			</view>
 		</view>
 	</view>
 </template>
