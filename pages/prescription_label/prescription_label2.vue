@@ -2,14 +2,14 @@
 <template>
 	<view class="YmContent" :animation="animationData">
 			<view class="prescription_label_1">
-				<text decode="true" class="prescription_label_2">计划明细</text>
+				<text decode="true" class="prescription_label_2">饮食情况明细</text>
 				<text decode="true" class="No">NO.{{list.planSn}}</text>
 				<view class="prescription_label_4">
 					<view class="prescription_label_12">
-						<text decode="true" class="prescription_label_15">消耗:</text>
-						<text decode="true" class="RealName">{{list.totalCalorie}}卡</text>
-						<text decode="true" class="prescription_label_17">时长</text>
-						<text decode="true" class="payType">{{list.totalTime}}小时</text>
+						<text decode="true" class="prescription_label_15">摄取:</text>
+						<text decode="true" class="RealName">{{list.ingestionCalorie}}卡</text>
+						<text decode="true" class="prescription_label_17">食量</text>
+						<text decode="true" class="payType">{{list.totalK}}克</text>
 					</view>
 					<view class="prescription_label_13">
 						<text decode="true" class="prescription_label_15">状态:</text>
@@ -35,21 +35,21 @@
 				</view>
 				<text decode="true" class="prescription_label_5"> Rp</text>
 				<view class="prescription_label_7">
-					<view v-for="(item, index) in list.orderItemList" :key="index" class="prescription_label_27">
+					<view v-for="(item, index) in list.orderFoodItemList" :key="index" class="prescription_label_27">
 						<view class="prescription_label_28">
 							<text decode="true" class="xh">{{index+1}}</text>
-							<text decode="true" class="DrugName">{{item.sfName}}</text>
-							<text decode="true" class="amount">{{item.sfQuantity*0.5}}h</text>
-							<text decode="true" class="price">{{item.sfQuantity*item.sfCalorie}}卡</text>
+							<text decode="true" class="DrugName">{{item.foodName}}</text>
+							<text decode="true" class="amount">{{item.foodQuantity}}g</text>
+							<text decode="true" class="price">{{item.foodQuantity*item.foodCalorie}}卡</text>
 						</view>
-						<text decode="true" class="used">{{item.sfSn}}</text>
+						<text decode="true" class="used">{{item.foodSn}}</text>
 						<image v-on:click="prescription_label_30_30_click(item_7)"  src="/static/my/prescription_label/images/prescription_label_30_30.jpg" mode="scaleToFill" border="0"    class="prescription_label_30"></image>
-						<text decode="true" class="prescription_label_31">运动编号</text>
+						<text decode="true" class="prescription_label_31">食品编号</text>
 					</view>
 				</view>
 				<view class="prescription_label_8">
-					<text decode="true" class="prescription_label_10">总共消耗</text>
-					<text decode="true" class="Total">{{list.totalCalorie}}卡</text>
+					<text decode="true" class="prescription_label_10">总共摄取</text>
+					<text decode="true" class="Total">{{list.ingestionCalorie}}卡</text>
 				</view>
 				<text decode="true" class="fromInfo">该数据由健康管理平台提供</text>
 			</view>

@@ -18,15 +18,19 @@ import app from "../../../App.vue"
 		data() {
 			return {
 				flag:false,
+				flagFood:false,
 				pageNum:1,
+				PageNumFood:1,
 				loadingText: '',
 				list_orders: [],
+				list_orders_food:[],
 				page:1,//当前分页页码
 				apiUrl:'',//后端接口地址
 				id:'',//传值使用,方便存在本地的locakStorage  
 				del_id:'',//方便存在本地的locakStorage  
 				current: 0,
 				swiperCurrent: 0,
+				inx:0,
 				list: [
 					{
 						name: '运动'
@@ -41,8 +45,18 @@ import app from "../../../App.vue"
 
 		},
 		async onLoad(options) {
-			this.getOrderList();
+			/* if(this.swiperCurrent==0){
+				this.page=0;
+				this.getOrderList();
+			}
+			else if(this.swiperCurrent==1){
+				this.page=0;
+				this.getOrderListFood();
+			} */
 			
+	
+			this.getOrderList();
+			this.page=0;
 			_self = this;
 			
 			//检查是否登录参考代码,需要用的时候，可以把注释取掉
@@ -51,8 +65,6 @@ import app from "../../../App.vue"
 			//}
 			
 			//this.getLaction();//得到gps
-
-			this.page=0;
 
 			//检测有没有传入id参数
 			if (options.id != null && options.id !=""){
@@ -74,32 +86,43 @@ import app from "../../../App.vue"
 			//下拉刷新的时候请求一次数据
 			this.Refresh();
 		},
-		async onReachBottom() {
+/* 		async onReachBottom() {
 			if(this.list_orders.length<this.pageNum*10){
 				this.flag=true
 				return
 			}
 			this.pageNum++
 			this.getOrderList()
-		},
+		}, */
 		methods: {
 			reachBottom() {
-				// 此tab为空数据
-				/* if(this.current != 2) {
-					this.loadStatus.splice(this.current,1,"loading")
-					setTimeout(() => {
-						this.getOrderList(this.current);
-					}, 1200);
-				} */
+				if(this.list_orders.length<this.pageNum*10){
+					this.flag=true
+					return
+				}
+				this.pageNum++
+				this.getOrderList()
+			},
+			reachBottom2() {
+				console.log("1111")
+				if(this.list_orders_food.length<this.pageNumFood*10){
+					this.flagFood=true
+					return
+				}
+				this.pageNum++
+				this.getOrderList()
 			},
 			change(index) {
 				this.swiperCurrent = index;
-				if(index==0){
-					this.getOrderList(),
-					console.log("11111")
+				if(this.swiperCurrent==0){
+					this.list_orders_food=[]
+					this.list_orders=[]
+					this.getOrderList()
 				}
-				if(index==1){
-					console.log("22222")
+				else if(this.swiperCurrent==1){
+					this.list_orders_food=[]
+					this.list_orders=[]
+					this.getOrderFoodList()
 				}
 			},
 			transition({ detail: { dx } }) {
@@ -114,13 +137,24 @@ import app from "../../../App.vue"
 			async getOrderList(){
 				const res=await this.$u.api.getOrderList({status:1,pageNum:this.pageNum})
 				this.list_orders=[...this.list_orders,...res.list]
-				console.log(this.list_orders)
+			},
+			async getOrderFoodList(){
+				const res=await this.$u.api.getOrderListFood({status:1,PageNumFood:this.PageNumFood})
+				this.list_orders_food=[...this.list_orders_food,...res.list]
 			},
 			toDetail(index){
 				this.$u.route({
 					url:'pages/prescription_label/prescription_label',
 					params:{
 						list: JSON.stringify(this.list_orders[index])
+					}
+				})
+			},
+			toDetailFood(index){
+				this.$u.route({
+					url:'pages/prescription_label/prescription_label2',
+					params:{
+						list: JSON.stringify(this.list_orders_food[index])
 					}
 				})
 			},

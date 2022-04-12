@@ -37,6 +37,7 @@ import app from "../../App.vue"
 		},
 		onLoad(options) {
 			this.list=JSON.parse(options.list)
+			console.log(this.list)
 			_self = this;
 			
 			//检查是否登录参考代码,需要用的时候，可以把注释取掉
