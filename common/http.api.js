@@ -52,6 +52,10 @@ const install = (Vue, vm) => {
 	vm.$u.api.getOrderList = params => vm.$u.get('order/list',params);
 	//根据计划信息生成计划单
 	vm.$u.api.generateOrder = params => vm.$u.post('order/generateOrder',params);
+	//按状态分页获取用户饮食记录
+	vm.$u.api.getOrderListFood = params => vm.$u.get('orderFood/list',params);
+	//根据计划信息生成饮食记录
+	vm.$u.api.generateOrderFood = params => vm.$u.post('orderFood/generateOrder',params);
 	//批量删除
 	vm.$u.api.deletes = params => vm.$u.post('plan/deletes',params);
 	//根据身高体重判断bmi

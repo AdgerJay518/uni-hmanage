@@ -55,7 +55,8 @@
 				money : 0,
 				num   : 0,
 				time  : 0,
-				half  : 0.5
+				half  : 0.5,
+				ids:[],
 			}
 		},
 		methods:{
@@ -183,11 +184,11 @@
 				for (var i = 0; i < this.list.length; i++) {
 					if (this.list[i].options[0].check == true) {
 						this.money += this.list[i].options[0].calorie * this.list[i].options[0].quantity;
-						this.time +=this.list[i].options[0].quantity * this.half
+						this.time +=this.list[i].options[0].quantity
 					}
 				}
 			},
-			goPay() {
+			async goPay() {
 				const arry = this.list.filter(function(item) {
 					return item.options[0].check === true;
 				})
@@ -198,13 +199,20 @@
 					});
 					return
 				}
+				this.ids=[]
+				for(var i=0;i<arry.length;i++){
+					//this.id=item[i].options[0].id
+					this.ids.push(arry[i].options[0].id)
+				}
+				const params={
+					planIds:this.ids,
+					ingestionCalorie:this.money,
+					totalK:this.time
+				}
+				await this.$u.api.generateOrderFood(params)
+				await this.$u.api.deletesFood({planIds:this.ids})
 				this.$u.route({
 					url:'pages/waiting_for_restaurant_order/waiting_for_restaurant_order',
-					params:{
-						list: JSON.stringify(arry),
-						totalCalorie:this.money,
-						totalTime:this.time
-					}
 				})
 			}
 		}
